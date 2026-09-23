@@ -23,8 +23,8 @@ if (process.env.NODE_ENV === 'production') {
     const clientBuildPath = path.join(__dirname, '../client/dist');
     app.use(express.static(clientBuildPath));
 
-    // All non-API routes → serve index.html (React Router handles them)
-    app.get('*', (req, res) => {
+    // Express v5 requires named wildcards — '/{*path}' instead of '*'
+    app.get('/{*path}', (req, res) => {
         res.sendFile(path.join(clientBuildPath, 'index.html'));
     });
 }
