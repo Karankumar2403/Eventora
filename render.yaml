@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: eventora
+    env: node
+    region: singapore   # closest to India
+    plan: free
+    rootDir: .          # root of the repo
+    buildCommand: npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGO_URL
+        sync: false       # set manually in Render dashboard
+      - key: JWT_SECRET
+        sync: false       # set manually in Render dashboard
+      - key: EMAIL_USER
+        sync: false       # set manually in Render dashboard
+      - key: EMAIL_PASS
+        sync: false       # set manually in Render dashboard
+      - key: PORT
+        value: 10000      # Render's default port
