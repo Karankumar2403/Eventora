@@ -151,18 +151,6 @@ This starts both the backend and frontend at the same time:
 | 🟢 Backend (Express) | http://localhost:5000 |
 
 ---
-
-## 🔑 Default Admin Login
-
-After running `npm run seed`:
-
-| Field | Value |
-|---|---|
-| Email | `admin@eventora.com` |
-| Password | `admin123` |
-
----
-
 ## 🌐 Deploying to Render (Free Hosting)
 
 > Deploy the entire app (frontend + backend) as **one service** on Render.
